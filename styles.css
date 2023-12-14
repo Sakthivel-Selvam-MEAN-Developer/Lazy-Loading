@@ -1,0 +1,76 @@
+.container {
+    max-width: 960px;
+}
+.stack-loader{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    transition: all 300ms linear;
+}
+.loader:nth-child(1){
+    width: 15px;
+    background-color: rgb(108, 1, 1);
+}
+.loader:nth-child(2){
+    width: 28px;
+    background:rgb(0, 204, 255);
+    animation-delay: .1s;
+}
+.loader:nth-child(3){
+    width: 15px;
+    background:rgb(255, 222, 10);
+    animation-delay: .2s;
+}
+
+.loader{
+    height: 4px;
+    border-radius: 20px;
+    animation: loader-effect 2s infinite ease;
+}
+.load{
+    display: flex;
+}
+.card-deck .card {
+    margin-bottom: 15px;
+    min-width: 220px;
+}
+.card{
+    transition: all 300ms linear;
+}
+
+
+@keyframes loader-effect {
+    from, to{
+        transform:translateX(0px) ;
+    }
+    50%{
+        transform: translateX(50px);
+    }
+}
+
+
+@media (min-width:576px) {
+    .card-deck {
+        display: flex;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        margin-right: -15px;
+        margin-left: -15px
+    }
+
+    .card-deck .card {
+        -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px
+    }
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
